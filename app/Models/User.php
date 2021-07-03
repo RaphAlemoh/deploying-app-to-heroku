@@ -10,6 +10,14 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+    
+
+    public function getAvatarUrl()
+    {
+        $url = $this->avatar_url;
+        return $url;
+    }
+
 
     /**
      * The attributes that are mass assignable.
